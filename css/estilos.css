@@ -1,0 +1,44 @@
+body
+{
+  background-image: url("https://www.cebrac.com.br/view/img/cursos/criacao-games/criacao-games.jpg");
+  font-family: Roboto;
+}
+
+.menu
+{
+  background-color: white;
+}
+
+.menu ul
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li
+{
+  list-style: none;
+}
+
+a
+{
+  color: #0A0A48;
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: underline;
+}
+
+.site-subtitle,
+.site-title
+{
+  color: #0BB5FF;
+  text-align: center;
+}
+
+.site-subtitle
+{
+  font-style: italic;
+}
