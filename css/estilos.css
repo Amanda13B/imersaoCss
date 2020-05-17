@@ -1,12 +1,85 @@
+/*
+reset do css sobre os padrões colocados do html
+o fato de usar o * é para indicar que é para pegar tudo de forma generalizada, sem especificação
+isso é definido de forma genérica para todo o código, qualquer coisa mais específica pode sobrescrevê-lo
+*/
+*
+{
+  margin: 0;
+  /*usar margin 0 faz com que todas as margens colocadas automaticamente por padrão sejam 0*/
+  padding: 0;
+  /*o padding é uma borda "interna" do elemento no site, isso fará com que seja 0 também*/
+  box-sizing: border-box;
+  /*isso vai redefinir o tamanho da caixa do elemento mostrado na tela para que seu tamanho total
+  seja igual ao tamanho de sua borda*/
+}
+
 body
 {
-  background-image: url("https://www.cebrac.com.br/view/img/cursos/criacao-games/criacao-games.jpg");
+  /*background-image: url("https://www.cebrac.com.br/view/img/cursos/criacao-games/criacao-games.jpg");*/
+  background-color: #01061c;
   font-family: Roboto;
+  font-size: 12px;
+}
+
+/*esse @media funciona como um if
+se a tela tiver pelo menos 400px, vão ser aplicados esses estilos
+*/
+@media (min-width: 400px) 
+{
+  body
+  {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) 
+{
+  body
+  {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) 
+{
+  body
+  {
+    font-size: 22px;
+  }
+}
+
+header
+{
+  height: 100vh;
+  display: flex;
+  /*lembrando que o flex exibe os elementos um do lado do outro*/
+  justify-content: center;
+  align-items: center;
+  /*ambas as propriedades justify-content e align-items só funcionam por conta do uso do display:flex que foi usado anteriormente
+  o justify vai centralizar horizontalmente os elementos e o align items vai centralizar verticalmente*/
+}
+
+@media (min-width: 1200px) 
+{
+  header
+  {
+    height: 90vh;
+  }
 }
 
 .menu
 {
   background-color: white;
+  position: fixed;
+  /*usando o fixed, o elemento em questão mantém sua posição fixa na tela até mesmo com scroll. O fixed também mexe com a posição no
+  eixo Z do elemento, fazendo com que ele fique por cima de todo o resto*/
+  width: 100vw;
+  /*isso fará com que a largura da barra de menu seja igual a largura do viewport (área de visualização da tela), ou seja,
+  igual a 100% (100) do viewport width (vw)*/
+  top: 0;
+  /*o uso do top só funciona se um position estiver sendo usado (nesse caso, position:fixed). Dessa forma, ele vai fixar o elemento
+  no topo da página, com uma distância própria dela (nesse caso, vai estar a uma distância 0 do topo da página)*/
 }
 
 .menu ul
@@ -20,9 +93,22 @@ body
   list-style: none;
 }
 
+/*ao usar o .menu, está selecionando a class menu criada lá no html, ao dar espaço e usar o "a", significa que estou 
+pegando a tag <a> que está dentro da classe menu (class menu) */
+.menu a 
+{
+  display: block;
+  padding: 10px 20px;
+  /*para tags e elementos inline, ou seja, que não apresentam quebra de linha (por serem do tamanho do texto), 
+  o padding não funciona naturalmente, apresenta muitos bugs. Para funcionar, é necessário transformar
+  o display do elemento em block*/
+  color: #0A0A48;
+  text-decoration: none;
+}
+
 a
 {
-  color: #0A0A48;
+  color: white;
   text-decoration: none;
 }
 
@@ -41,4 +127,27 @@ a:hover
 .site-subtitle
 {
   font-style: italic;
+}
+
+.img-portfolio
+{
+  height: 200px;
+  width: 200px ;
+}
+
+.img-portfolio1
+{
+  height: 150px;
+  width: 200px ;
+}
+
+.img-portfolio2
+{
+  height: 250px;
+  width: 200px ;
+}
+
+.secao-portfolio
+{
+  color : #0BB5FF;
 }
