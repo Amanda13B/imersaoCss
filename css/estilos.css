@@ -18,7 +18,7 @@ body
 {
   /*background-image: url("https://www.cebrac.com.br/view/img/cursos/criacao-games/criacao-games.jpg");*/
   background-color: #01061c;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 
@@ -108,13 +108,18 @@ pegando a tag <a> que está dentro da classe menu (class menu) */
 
 a
 {
-  color: white;
-  text-decoration: none;
+  color: #0BB5FF;
+  text-decoration: underline;
+}
+
+.menu a:hover
+{
+  text-decoration: underline;
 }
 
 a:hover
 {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .site-subtitle,
@@ -124,30 +129,133 @@ a:hover
   text-align: center;
 }
 
+.site-title
+{
+  font-size: 3.2em;
+  font-family: 'Allura', cursive;
+}
+
 .site-subtitle
 {
+  font-size: 2em;
+  font-family: 'Allura', cursive;
   font-style: italic;
-}
-
-.img-portfolio
-{
-  height: 200px;
-  width: 200px ;
-}
-
-.img-portfolio1
-{
-  height: 150px;
-  width: 200px ;
-}
-
-.img-portfolio2
-{
-  height: 250px;
-  width: 200px ;
 }
 
 .secao-portfolio
 {
   color : #0BB5FF;
+  padding: 2em;
+  height: 105vh;
 }
+
+.secao-portfolio h2
+{
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 1em;
+}
+
+.secao-portfolio .grid
+{
+  display: grid;
+  /*o uso do grid é para poder arrumar os elementos em linhas e colunas com maior precisão, ao contrário do flex onde
+  a disposição é automática e não muito precisa*/
+
+  gap: 2em;
+  /*o gap é o espaço entre os elementos da grid*/
+}
+
+@media(min-width: 560px)
+{
+  .secao-portfolio .grid
+  {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media(min-width: 730px)
+{
+  .secao-portfolio .grid
+  {
+    grid-template-columns: 320px 320px;
+    justify-content: center;
+  }
+}
+
+@media(min-width: 840px)
+{
+  .secao-portfolio .grid
+  {
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+  }
+}
+
+@media(min-width: 1040px)
+{
+  .secao-portfolio .grid
+  {
+    grid-template-columns: 500px 500px;
+    justify-content: center;
+  }
+}
+
+@media(min-width: 1200px)
+{
+  .secao-portfolio .grid
+  {
+    grid-template-columns: 600px 600px;
+    justify-content: center;
+  }
+}
+
+.secao-portfolio figure
+{
+  text-align: center;
+}
+
+.img-portfolio
+{
+  height: 100px;
+  width: auto;
+}
+
+.img-portfolio2
+{
+  height: 120px;
+  width: auto;
+}
+
+@media(min-width:400px)
+{
+  .img-portfolio
+  {
+    height: 150px;
+    width: auto;
+  }
+  .img-portfolio2
+  {
+    height: 170px;
+    width: auto;
+  }
+}
+
+@media(min-width:560px)
+{
+  .img-portfolio
+  {
+    height: 170px;
+    width: auto;
+  }
+}
+
+@media(min-width:1200px)
+{
+  .img-portfolio,.img-portfolio2
+  {
+    height: 200px;
+    width: auto;
+  }
+}
+
