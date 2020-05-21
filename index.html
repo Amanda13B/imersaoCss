@@ -11,26 +11,31 @@
     que está no caminho indicado no href. Esse caminho é feito a partir do local onde o arquivo html está,
     por isso eu coloco que ele tem que entrar na pasta css (onde o arquivo css está salvo) e pegar o arquivo
     estilos.css (é o nome do arquivo e seu formato). Essa parte vai no head para que o arquivo leia isso quando carregar-->
+
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Raleway&family=Roboto&display=swap" rel="stylesheet">
     <!--esse segundo link está puxando as fontes do google fonts-->
+
+    <script src="https://kit.fontawesome.com/8b39834731.js" crossorigin="anonymous"></script>
+    <!--esse link está puxando a referência para usar os ícones-->
 </head>
 <body>
     <header>
         <nav class="menu">
           <ul>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Portfólio</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <!--o # serve para levar para a seção com o id de nome especificado-->
           </ul>
         </nav>
 
-        <div>
+        <div class="titulos">
           <h1 class="site-title">Amanda Brito</h1>
           <h2 class="site-subtitle">estudante de jogos digitais</h2>
         </div>  
     </header>
 
-    <section class = "secao-portfolio">
+    <section class = "secao-portfolio" id="portfolio">
       <h2>Portfólio</h2>
 
       <div class="grid">
@@ -53,21 +58,30 @@
       </div>
     </section>
 
-    <section class="contato">
+    <section class="contato" id="contato">
       <h2>Contato</h2>
       <div class="grid icons">
+
         <a target="_blank" href="https://github.com/Amanda13B">
-          Github
+          <!--Github-->
+          <i class="fab fa-github-square"></i>
         </a>
+
         <a target="_blank" href="https://twitter.com/HeartAnimations">
-          twitter
+          <!--twitter-->
+          <i class="fab fa-twitter-square"></i>
         </a>
+
         <a target="_blank" href="https://www.linkedin.com/in/amanda-brito-b716541a2/">
-          linkedin
+          <!--linkedin-->
+          <i class="fab fa-linkedin"></i>
         </a>
+
         <a href="mailto:heartgamesanimations@gmail.com">
-          email
+          <!--email-->
+          <i class="fas fa-envelope-square"></i>
         </a>
+
       </div>
     </section>
 </body>

@@ -80,6 +80,9 @@ header
   top: 0;
   /*o uso do top só funciona se um position estiver sendo usado (nesse caso, position:fixed). Dessa forma, ele vai fixar o elemento
   no topo da página, com uma distância própria dela (nesse caso, vai estar a uma distância 0 do topo da página)*/
+
+  z-index: 1;
+  /*aumenta a prioridade do menu no eixo Z, fazendo com que ele fique por cima de todos os elementos*/
 }
 
 .menu ul
@@ -104,6 +107,17 @@ pegando a tag <a> que está dentro da classe menu (class menu) */
   o display do elemento em block*/
   color: #0A0A48;
   text-decoration: none;
+  transition: background-color 0.5s, color 0.5s;
+  /*o transition é responsável por fazer as transições nos elementos passados (nesse caso, background color e color)
+  o tempo de transição de cada um é passado também*/
+}
+
+/*o active funciona quando a opção for clicada (no caso, foi usado para a animação acontecer no touch do celular, já que não existe hover*/
+.menu a:active,.menu a:hover
+{
+  text-decoration: underline;
+  color: white;
+  background-color:#0A0A48;
 }
 
 a
@@ -112,14 +126,48 @@ a
   text-decoration: underline;
 }
 
-.menu a:hover
-{
-  text-decoration: underline;
-}
-
 a:hover
 {
   text-decoration: none;
+}
+
+.contato .icons
+{
+  text-align: center;
+}
+
+.contato a
+{
+  text-decoration: none;
+  font-size: 4em;
+  transition: text-shadow 0.5s;
+}
+
+
+.contato a:active, .contato a:hover
+{
+  text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+}
+
+.titulos
+{
+  transform: scale(0.5) translateX(-70vw);
+  opacity: 0;
+
+  animation: ease-in 1.3s tituloAnim forwards;
+  /*isso faz com que o elemento faça a animação determinada por esse nome. A propriedade forwards faz com que ele trave no
+  último frame da animação e não desapareça*/
+}
+
+/*essa propriedade cria a animação, dentro dela passa os estados da animação em porcentagem. Nesse caso não foi necessário
+inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
+@keyframes tituloAnim
+{
+  100%
+  {
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
 }
 
 .site-subtitle,
@@ -142,14 +190,16 @@ a:hover
   font-style: italic;
 }
 
-.secao-portfolio
+.contato, .secao-portfolio
 {
   color : #0BB5FF;
   padding: 2em;
-  height: 105vh;
+  min-height: 105vh;
+  /*o uso de min-height é justamente pelo fato de o conteúdo ter um valor mínimo de altura, se ele fosse settado para ser
+  sempre um tamanho fixo, ele pode não comportar o conteúdo dentro e acabar jogando um em cima do outro*/
 }
 
-.secao-portfolio h2
+.contato h2, .secao-portfolio h2
 {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 1em;
@@ -219,12 +269,24 @@ a:hover
 {
   height: 100px;
   width: auto;
+  transition: transform 0.5s;
 }
 
 .img-portfolio2
 {
   height: 120px;
   width: auto;
+  transition: transform 0.5s;
+}
+
+.img-portfolio:hover
+{
+  transform: scale(1.1);
+}
+
+.img-portfolio2:hover
+{
+  transform: scale(1.1);
 }
 
 @media(min-width:400px)
@@ -258,4 +320,5 @@ a:hover
     width: auto;
   }
 }
+
 
