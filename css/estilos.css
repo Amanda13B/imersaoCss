@@ -190,7 +190,7 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
   font-style: italic;
 }
 
-.contato, .secao-portfolio
+.sobre, .contato, .secao-portfolio
 {
   color : #0BB5FF;
   padding: 2em;
@@ -199,10 +199,38 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
   sempre um tamanho fixo, ele pode não comportar o conteúdo dentro e acabar jogando um em cima do outro*/
 }
 
-.contato h2, .secao-portfolio h2
+.sobre h2, .contato h2, .secao-portfolio h2
 {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 1em;
+}
+
+@media(min-width: 1200px)
+{
+  .sobre p
+  {
+    max-width: 1100px;
+  }
+}
+
+.sobre p
+{
+  color: white;
+  text-indent: 2em;
+  margin-bottom: 1em;
+  text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobre a
+{
+  text-decoration: none;
+}
+
+.sobre a:hover
+{
+  text-decoration: underline;
 }
 
 .secao-portfolio .grid
