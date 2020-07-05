@@ -138,6 +138,7 @@ a:hover
 
 .contato a
 {
+  color: #0A0A48;
   text-decoration: none;
   font-size: 4em;
   transition: text-shadow 0.5s;
@@ -146,7 +147,7 @@ a:hover
 
 .contato a:active, .contato a:hover
 {
-  text-shadow: 0px 0px 15px rgba(255,255,255,0.5);
+  text-shadow: 0px 0px 20px rgba(255,255,255,0.9);
 }
 
 .titulos
@@ -190,19 +191,41 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
   font-style: italic;
 }
 
-.sobre, .contato, .secao-portfolio
+.secao-portfolio
 {
   color : #0BB5FF;
   padding: 2em;
-  min-height: 105vh;
+  min-height: 110vh;
   /*o uso de min-height é justamente pelo fato de o conteúdo ter um valor mínimo de altura, se ele fosse settado para ser
   sempre um tamanho fixo, ele pode não comportar o conteúdo dentro e acabar jogando um em cima do outro*/
 }
 
-.sobre h2, .contato h2, .secao-portfolio h2
+.contato
+{
+  background-color: #1398d1;
+  color : #0A0A48;
+  padding: 2em;
+  min-height: 60vh;
+}
+
+.sobre
+{
+  background-color: #1398d1;
+  color : #0A0A48;
+  padding: 2em;
+  min-height: 90vh;
+}
+
+.sobre h2, .secao-portfolio h2
 {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 1em;
+}
+
+.contato h2
+{
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 2em;
 }
 
 @media(min-width: 1200px)
@@ -215,7 +238,7 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
 
 .sobre p
 {
-  color: white;
+  color: #0A0A48;
   text-indent: 2em;
   margin-bottom: 1em;
   text-align: justify;
@@ -225,12 +248,19 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
 
 .sobre a
 {
+  color: white;
   text-decoration: none;
 }
 
 .sobre a:hover
 {
   text-decoration: underline;
+}
+
+.sobre .imagem-controle
+{
+  float: right;
+  margin-left: 1.5em;
 }
 
 .secao-portfolio .grid
