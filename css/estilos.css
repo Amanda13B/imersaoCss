@@ -263,6 +263,10 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
   margin-left: 1.5em;
 }
 
+.imagem-controle img{
+  width: 600px;
+}
+
 .secao-portfolio .grid
 {
   display: grid;
@@ -273,8 +277,24 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
   /*o gap é o espaço entre os elementos da grid*/
 }
 
+@media(min-width: 400px)
+{
+  .sobre .imagem-controle
+  {
+    float: center;
+    margin: 1.5em;
+  }
+  .imagem-controle img{
+    width: 400px;
+  }
+}
+
 @media(min-width: 560px)
 {
+  .imagem-controle img{
+    width: 300px;
+  }
+
   .secao-portfolio .grid
   {
     grid-template-columns: 240px 240px;
@@ -284,6 +304,10 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
 
 @media(min-width: 730px)
 {
+  .imagem-controle img{
+    width: 400px;
+  }
+
   .secao-portfolio .grid
   {
     grid-template-columns: 320px 320px;
@@ -293,6 +317,10 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
 
 @media(min-width: 840px)
 {
+  .imagem-controle img{
+    width: 500px;
+  }
+
   .secao-portfolio .grid
   {
     grid-template-columns: 400px 400px;
@@ -302,6 +330,10 @@ inserir o 0% pois ele já inicia nesse estado lá na parte de cima em .titulos*/
 
 @media(min-width: 1040px)
 {
+  .imagem-controle img{
+    width: 600px;
+  }
+
   .secao-portfolio .grid
   {
     grid-template-columns: 500px 500px;
